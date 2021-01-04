@@ -30,7 +30,7 @@ if (antwoord === 'ja') {
                     alert('de koning wordt boos wordt boos op de bakker en laat heb opgesloten worden in de cellen waar die de rest van zijn leven zal rotten. de koning vraagt nu als u een eitje voor hem gaat maken');
                 }
             }
-            if (antwoord === 'nee') {
+            else if (antwoord === 'nee') {
                 vraag = 'Gaat u een eitje maken voor de koning?';
                 antwoord =prompt(vraag + uitleg);
 
