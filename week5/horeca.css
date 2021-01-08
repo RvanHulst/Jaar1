@@ -1,8 +1,19 @@
+  
 html{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+}
+body{
+    background-image: url(img/bar.jpeg);
+    background-size: cover;
+    font-size: 100%;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: left;
+    color: black;
+    background-repeat: no-repeat;
 }
 hr {
     height: 5px;

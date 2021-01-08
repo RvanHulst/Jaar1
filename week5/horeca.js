@@ -57,3 +57,52 @@ function vraagdrank(naam) {
   console.log(prijsbier);
   vraagdrank(prompt("Welke bestelling wilt u toevoegen?"));
     } else if (naam == "snack"){
+      
+  bitter();
+
+} else if (naam == null){
+
+return prijsfris, prijswijn, prijsbier, prijsbal, hoev_fris, hoev_bier, hoev_wijn, hoev_bal;
+
+} else {
+  alert("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.");
+  vraagdrank(prompt("Welke bestelling wilt u toevoegen?"));
+}
+}
+
+vraagdrank(prompt("Welke bestelling wilt u toevoegen?"));
+
+//bereken totaal bedrag
+totaal = prijsfris + prijsbier + prijswijn + prijsbal;
+
+//schrijft html code
+document.write("<h2>Rekening</h2>");
+document.write("<table>");
+document.write("<tr>");
+document.write("<th>Bestelling</th>");
+document.write("<th>Hoeveelheid</th>");
+document.write("<th>Prijs</th>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Fris</td>");
+document.write("<td>" + hoev_fris +"</td>");
+document.write("<td>" + prijsfris.toFixed(2) + "</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Bier</td>");
+document.write("<td>" + hoev_bier + "</td>");
+document.write("<td>" + prijsbier.toFixed(2) + "</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Wijn</td>");
+document.write("<td>" + hoev_wijn + "</td>");
+document.write("<td>" + prijswijn.toFixed(2) + "</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Bitterballen</td>");
+document.write("<td>" + hoev_bal + "</td>");
+document.write("<td>" + prijsbal.toFixed(2) + "</td>");
+document.write("</tr>");
+document.write("</table>");
+document.write("<h3>Totaal</h3>");
+document.write("<p>" + totaal.toFixed(2) + "</p>");
