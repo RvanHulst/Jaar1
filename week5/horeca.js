@@ -1,7 +1,7 @@
 //prijs en variabelen van de producten van de site
-var prijsfris = 0;
-var prijswijn = 0;
-var prijsbier = 0;
+//var prijsfris = 0;
+//var prijswijn = 0;
+//var prijsbier = 0;
 var prijsbal = 0;
 var prijsf = 1.97;
 var prijsw = 3.15;
@@ -13,9 +13,8 @@ var hoev_wijn = 0;
 var hoev_bal = 0;
 var totaal = 0;
 
-
 //vraag naar bitterballen
-function bitter() {
+function vraagBitterbalen() {
   var balhoeveelheid = prompt("Hoeveel bitterballen wilt u toevoegen (8 of 16)?");
 
   if (balhoeveelheid == 8 || balhoeveelheid == 16) {
@@ -58,7 +57,7 @@ function vraagdrank(naam) {
   vraagdrank(prompt("Welke bestelling wilt u toevoegen?"));
     } else if (naam == "snack"){
       
-  bitter();
+    vraagBitterbalen();
 
 } else if (naam == null){
 
@@ -74,35 +73,3 @@ vraagdrank(prompt("Welke bestelling wilt u toevoegen?"));
 
 //bereken totaal bedrag
 totaal = prijsfris + prijsbier + prijswijn + prijsbal;
-
-//schrijft html code
-document.write("<h2>Rekening</h2>");
-document.write("<table>");
-document.write("<tr>");
-document.write("<th>Bestelling</th>");
-document.write("<th>Hoeveelheid</th>");
-document.write("<th>Prijs</th>");
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Fris</td>");
-document.write("<td>" + hoev_fris +"</td>");
-document.write("<td>" + prijsfris.toFixed(2) + "</td>");
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Bier</td>");
-document.write("<td>" + hoev_bier + "</td>");
-document.write("<td>" + prijsbier.toFixed(2) + "</td>");
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Wijn</td>");
-document.write("<td>" + hoev_wijn + "</td>");
-document.write("<td>" + prijswijn.toFixed(2) + "</td>");
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Bitterballen</td>");
-document.write("<td>" + hoev_bal + "</td>");
-document.write("<td>" + prijsbal.toFixed(2) + "</td>");
-document.write("</tr>");
-document.write("</table>");
-document.write("<h3>Totaal</h3>");
-document.write("<p>" + totaal.toFixed(2) + "</p>");

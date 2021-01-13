@@ -23,15 +23,3 @@ hr {
     margin-left:0;
     width: 400px;
 }
-#bon{
-    margin: 0 auto;
-    min-width: 400px;
-    background-color: #c4d1cf;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    border: 5px dotted black;
-    margin-left: 25px;
-    margin-top: 25px;
-    padding: 10px;
-    display: none;
-}
