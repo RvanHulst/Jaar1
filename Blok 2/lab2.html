@@ -11,9 +11,13 @@
             var names = [prompt('wat is naam 1'), prompt('wat is naam 2'), prompt('wat is naam 3')];
         } else if (hoeveelheidNamen >3) {
             for (naam = 3; naam < hoeveelheidNamen; naam++) {
-                [prompt('wat is naam ' + naam);
+                prompt('wat is naam ' + naam);
             }
         }
+    function test() {
+        var result = document.getElementById('array').innerHTML = '<h2>' + 'De ingevoerde namen in de array zijn: ' + '<br>' + names + '<br>' + 'De ingevoerde namen in de array in de omgekeerde volgorde zijn: ' + names.reverse() + '</h2>';
+    }
+    test();
 
 
 
