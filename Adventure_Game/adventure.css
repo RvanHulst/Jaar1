@@ -1,7 +1,23 @@
 body {	
-	background-image: url("images/Minecraft.jpg");
+	background-image: url("images/Cover.jpg");
 	background-size: cover;	
 	background-repeat: no-repeat;
 	text-align: center;
+	color: white;
 
+}
+#title {
+	font-size: 50px;
+}
+
+#inventoryItem {
+	display: none;
+}
+
+#description {
+	background-color: black;
+}
+
+#button1, #button2, #button3 {
+	text-align: center;
 }

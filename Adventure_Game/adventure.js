@@ -1,15 +1,72 @@
-var gameContainer = document.getElementById('game-container');
+const gameContainer = document.getElementById('game-container');
 
-var title = document.getElementById('title');
-var description = document.getElementById('description');
+const title = document.getElementById('title');
+const gameImage = document.getElementById('image');
+const description = document.getElementById('description');
 
-var gameButtons = document.getElementById('game-buttons');
-var button1 = document.getElementById('button1');
-var button2 = document.getElementById('button2');
-var button3 = document.getElementById('button3');
+const gameButtons = document.getElementById('game-buttons');
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+const button3 = document.getElementById('button3');
 
-var inventoryItem = document.getElementById('inventoryItem');
+const inventoryItem = document.getElementById('inventoryItem');
 
-var startMusic = new Audio("audio/");
-var deathSound = new Audio("audio/");
-var winMusic = new Audio("audio/");
+const startMusic = new Audio("audio/riot.mp3");
+const deathSound = new Audio("audio/dead.mp3");
+const winMusic = new Audio("audio/");
+
+alert("Voor de beste ervaring moet u de muziek aanzetten. Klik op de muziek knop.");
+
+function startscreen() {
+	console.log("Start Screen");
+	gameImage.src="images/politielogo.png";
+	title.innerHTML="World War Now";
+	button3.onclick=function() {music();};
+	button3.innerHTML="Muziek";
+	button2.onclick=function() {
+		level1();
+	}
+	button2.innerHTML="Start het spel";
+	button1.style.display="none";
+	description.innerHTML="Welkom bij mij spel. Je gaat nu als een agent spelen in de politie tegen de staats mogolen die gaan rellen";
+	description.style.width="500px";
+	description.style.margin="0 auto";
+}
+
+startscreen();
+
+function music() {
+	console.log("Music Turned ON");
+	startMusic.loop = true;
+	startMusic.play();
+	startMusic.volume = 1.0;
+}
+
+function death() {
+	console.log("Death");
+	deathSound.play();
+	deathSound.volume = 1.0;
+	alert("Je hebt de verkeerde keuze gemaakt. Je bent dood. Je kunt opnieuw beginnen.");
+	startscreen();
+}
+
+function itemAlert() {
+	console.log("NO ITEM");
+	alert("Je bent een item vergeten op te pakken! Je begint overnieuw!");
+	startscreen();
+}
+function level1() {
+	console.log("Level 1");
+	gameImage.src="images/briefing.png"
+	title.innerHTML="De Briefing";
+	description.innerHTML="je krijgt uitleg en er wordt verteld dat er vanavond rellen zullen zijn. iedreen moet naar locatie b5ad gaan oftewel zuidplein Roterdam";
+	button2.onclick=function() {
+		death();
+	}
+	button2.innerHTML="je neemt je geweer in je mond en vraagt jezelf af als die geladen is.";
+	button3.onclick=function() {
+		level2();
+	}
+	button3.innerHTML="Je hebt goed opgelet en gaat naar de locatie dat werd gemeld.";
+}
+
