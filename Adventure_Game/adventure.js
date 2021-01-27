@@ -69,4 +69,61 @@ function level1() {
 	}
 	button3.innerHTML="Je hebt goed opgelet en gaat naar de locatie dat werd gemeld.";
 }
+function level2() {
+	console.log("Level 2");
+	gameImage.src="images/locatie1.jpg"
+	title.innerHTML="De Locatie";
+	description.innerHTML="je bent op de locatie van het incident,";
+	button2.onclick=function() {
+		verkeerdeKeuzen1();
+	}
+	button2.innerHTML="je doet niks en loopt weg van de locatie .";
+	button3.onclick=function() {
+		level3();
+	}
+	button3.innerHTML="je doet iets.";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// verkeerde keuzens
+function verkeerdeKeuzen1() {
+	console.log("verkeerdeKeuzen1");
+	gameImage.src="images/Minecraft.png"
+	title.innerHTML="De verkeerde Keuzen test";
+	description.innerHTML="gok tussen het getal 1 of 2, kies de juiste en ga verder kies de verkeerde en ga dood!";
+	button2.onclick=function() {
+		death();
+	}
+	button2.innerHTML="Getal 1";
+	button3.onclick=function() {
+		death();
+	}
+	button3.innerHTML="Getal 2";
+}
+
+
 
