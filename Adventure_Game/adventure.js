@@ -74,9 +74,7 @@ function level2() {
 	gameImage.src="images/locatie1.jpg"
 	title.innerHTML="De Locatie";
 	description.innerHTML="je bent op de locatie van het incident,";
-	button2.onclick=function() {
-		verkeerdeKeuzen1();
-	}
+	button2.onclick=verkeerdeKeuzen1;
 	button2.innerHTML="je doet niks en loopt weg van de locatie .";
 	button3.onclick=function() {
 		level3();
@@ -99,7 +97,7 @@ function level3() {
 }
 function level4() {
 	console.log("Level 4");
-	gameImage.src="images/radio.jpg"
+	gameImage.src="images/radioPolice.jpg"
 	title.innerHTML="Radio Bericht";
 	description.innerHTML="......KRKAAA...Meldkamer.. Rotterdam-Zuid krrrr.... Rellen starten kkkrrrr... Meerdere eenheden in de buurt.... reageer er op..... CODE BLAUW.. CODE BLAUW. (dit bericht vervolgt nog 4x)";
 	button2.onclick=function() {

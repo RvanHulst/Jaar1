@@ -1,14 +1,14 @@
 var frisAmount = 0;
-var frisPrice = 1.50;
+const frisPrice = 1.50;
 
 var bierAmount = 0;
-var bierPrice = 2.50;
+const bierPrice = 2.50;
 
 var wijnAmount = 0;
-var wijnPrice = 3;
+const wijnPrice = 3;
 
 var BitterbalAmount = 0;
-var bitterbalPrice = 0.25;
+const bitterbalPrice = 0.25;
 
 var currentorder = "none";
 start();
